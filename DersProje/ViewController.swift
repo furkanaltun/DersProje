@@ -9,15 +9,41 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    
+    @IBOutlet weak var segmentedcontrol: UISegmentedControl!
+    @IBOutlet weak var textview: UITextView!
 
+    @IBOutlet weak var textfield: UITextField!
+    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        
+        label.text = "naber"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func buttonabas(_ sender: Any) {
+        
+        label.text = textfield.text
+        textview.text = textfield.text
+        
+        switch segmentedcontrol.selectedSegmentIndex {
+        case 0:
+            label.text = "1. seçildi"
+        case 1:
+            label.text = "2. seçildi"
+
+        case 2:
+            label.text = "3. seçildi"
+
+        case 3:
+            label.text = "4. seçildi"
+
+        default:
+            label.text = "hata"
+        }
+        
     }
 
 
