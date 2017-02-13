@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         default:
             label.text = "hata"
         }
-        
+        var str = "Merhaba"
     }
 
 
